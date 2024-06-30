@@ -1,0 +1,44 @@
+.links{
+    width: 100vw;
+    height: 100px;
+    background-color: rgb(244, 244, 244);
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 90px;
+    padding-top: 37px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+a{
+    margin-left: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace {
+    position: relative; 
+    color: #000; 
+    
+    background: none;
+  border: none;
+  padding: 5px;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.enlace::after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -3px; 
+    width: 0; 
+    height: 2px; 
+    background-color: #000; 
+    transition: width 0.3s; 
+}
+.enlace:hover::after {
+    width: 100%; 
+}
