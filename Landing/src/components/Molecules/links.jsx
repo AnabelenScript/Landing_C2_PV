@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import Userlogo from "../Atoms/userlogo";
 import Logo from "../Atoms/logo";
 import './links.css'
@@ -6,14 +7,16 @@ import './links.css'
 
 function Links(){
     return(
-            <><div class="links">
-            <a class="navbar-brand" href="sinInicio.html"><Logo/></a>
-              <a class="enlace" href="sinInicio.html">Inicio</a>
-              <a class="enlace" href="siProductos.html">Productos</a>
-              <a class="enlace" href="sipaquetes.html">Paquetes</a>
-              <a class="enlace" href="cinosotros.html">Acerca de nosotros</a>
-              <a class="enlace" href="cincontactanos.html">Contáctanos</a>
-              <a class="enlace" href="login.html"><Userlogo/></a></div>
+            <>
+            <div className="links">
+      <Link className="navbar-brand" to="/"><Logo/></Link>
+      <Link className="enlace" to="/">Inicio</Link>
+      <Link className="enlace" to="/products">Productos</Link>
+      <Link className="enlace" to="/paquetes">Paquetes</Link>
+      <Link className="enlace" to="/acerca-de-nosotros">Acerca de nosotros</Link>
+      <Link className="enlace" to="/contactanos">Contáctanos</Link>
+      <Link className="enlace" to="/login"><Userlogo/></Link>
+    </div>
              </>
     )
 }
